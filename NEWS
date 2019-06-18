@@ -1,0 +1,78 @@
+
+Version 2.0-9 2017-01-27
+-------------------------
+
+  o Further improvements to make configure portable. 
+    Following the suggestion by Kurt Hornik, I went back to the 
+    initial idea of defining a rule %cu : %.o (as those defined in    
+    /usr/lib/R/etc/Makeconf) and let Makeconf do the rest.
+    The problem I found before was that the default linker (e.g. g++) 
+    couldn't link objects compiled with nvcc. Now, I have found that 
+    a second stage "nvcc -dlink" is needed in order to generate 
+    objects to be linked by a linker other than nvcc.
+    Required flags are passed to the linker via PKG_LIBS.
+
+    When cuda files are compiled, R CMD reports 
+    "Found ‘exit’, possibly from ‘exit’ (C)"
+    This may require some fix in the future; currently 
+    no issue was observed when using the package.
+
+Version 2.0-8 2017-01-24
+-------------------------
+
+  o Configure failed on some systems. As reported by CRAN maintainer:
+    """
+    on Fedora we see
+    ** libs
+    g++ -std=gnu++98 -shared -L/usr/local/lib64 -o uroot.so
+    g++: fatal error: no input files
+    and the corresponding .mk with
+    uroot:
+       $(CXX) -shared $(LDFLAGS) -o uroot.so
+    is simply invalid: not only are there no source files, '-shared' is not
+    portable and CXXFLAGS and CXXPICFLAGS are missing.
+    """
+    Current solution: define a NAMESPACE.in where "dynload(uroot)" is 
+    included at the configure step depending on whether CUDA is detected or not.
+    configure.win remains as before (remove directory 'src', as I cannot check
+    the configure step on a Windows system with CUDA).
+    As reported by R CMD check, "NAMESPACE.in" is a non-standard file, 
+    but it seems the easiest way to avoid a dummy .so file.
+
+Version 2.0-7 2017-01-22
+-------------------------
+
+  o The configure script has been modified slightly in the hope 
+    to be more portable. 
+    
+  o The flag -lR has been removed when the dummy uroot.so file is 
+    generated (when CUDA is not available).
+
+  o configure.win has been simplified. CUDA files are ignored because 
+    I couldn't test it on a windows system with a CUDA enabled GPU.
+
+  o Added document uroot-intro.pdf with links to further documentation.
+
+Version 2.0-6 2017-01-05
+-------------------------
+
+  o A cleanup script has been added.
+
+  o GNU make is no longer a SystemRequirements.
+    Include files are used in order to avoid the 'ifeq' GNU make extension,
+    this makes Makevars more portable.
+
+  o The configure script creates now appropriate environment variables 
+    when it detects that it is running on the ARINA cluster of the UPV/EHU.
+
+Version 2.0-5 2016-03-18
+-------------------------
+
+  o Based on an older version of package uroot.
+    This version provides the CH test for seasonal stability and
+    the HEGY test for seasonal unit roots. The functions that implement 
+    these tests have been coded from the scratch in order to include the  
+    following new features:
+    1) the tests are applicable to series of any seasonal periodicity,
+    2) p-values based on response surface regressions are available for both tests,
+    3) bootstrapped p-values are available for the HEGY test.

@@ -1,0 +1,26 @@
+Package: uroot
+Version: 2.0-9.1
+Date: 2017-01-27
+Title: Unit Root Tests for Seasonal Time Series
+Author: Javier López-de-Lacalle <javlacalle@yahoo.es>
+Maintainer: ORPHANED
+Depends: R (>= 3.0.0), stats
+SystemRequirements: nvcc (release >= 7.1) (NVIDIA Cuda Compiler driver)
+Encoding: UTF-8
+Description: Seasonal unit roots and seasonal stability tests.
+    P-values based on response surface regressions are available for both tests.
+    P-values based on bootstrap are available for seasonal unit root tests.
+    A parallel implementation of the bootstrap method requires a CUDA capable GPU 
+    with compute capability >= 3.0, otherwise a debugging version fully coded in R is used.
+NeedsCompilation: yes
+LazyData: yes
+LazyDataCompression: xz
+License: GPL-2
+URL: https://jalobe.com
+Packaged: 2019-03-22 08:49:00 UTC; ripley
+Repository: CRAN
+Date/Publication: 2019-03-24 07:07:31 UTC
+X-CRAN-Original-Maintainer: Javier López-de-Lacalle
+        <javlacalle@yahoo.es>
+X-CRAN-Comment: Orphaned on 2019-03-24 as check problems were not
+        corrected in time.

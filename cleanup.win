@@ -1,0 +1,3 @@
+#!/bin/sh
+rm -f src/*.o src/*.so src/*.dll
+rm -f R/hegy-test.R

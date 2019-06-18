@@ -1,0 +1,50 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\selectlanguage{english}
+\usepackage[colorlinks=true, citecolor=blue, 
+  linkcolor=blue, urlcolor=blue,
+  bookmarksopen=false, pdfpagemode=UseOutlines]{hyperref}
+\usepackage{Sweave}
+\renewcommand{\baselinestretch}{1.3}
+\newcommand{\email}[1]{\href{mailto:#1}{\normalfont\texttt{#1}}}
+\topmargin -1cm
+\textheight 24cm
+\textwidth 14.2cm
+\oddsidemargin 0.5cm
+\evensidemargin 0.0cm
+
+\title{\textsf{R} Package \textsf{uroot}}
+\author{Javier L\'opez-de-Lacalle \\ \email{javlacalle@yahoo.es}}
+\date{January 2017}
+
+\begin{document}
+
+%\VignetteIndexEntry{uroot-intro}
+%\VignetteKeyword{seasonality}
+%\VignetteKeyword{time series}
+%\VignetteKeyword{unit roots}
+
+\maketitle
+\thispagestyle{empty}
+
+In order to reduce the size of the package and the time required for checking it, 
+the following documentation is provided outside the sources of the package: 
+
+\begin{itemize}
+\item An introduction to seasonal unit root tests implemented in the package is given here 
+(Section 6 is outdated):
+\begin{center}
+\href{https://www.jalobe.com/doc/uroot.pdf}{https://www.jalobe.com/doc/uroot.pdf}.
+\end{center}
+\item The GPU parallel implementation of the bootstrapped HEGY test statistics is 
+described here:
+\begin{center}
+\href{https://www.jalobe.com/doc/uroot-gpu.pdf}{https://www.jalobe.com/doc/uroot-gpu.pdf}.
+\end{center}
+\item \href{https://www.jalobe.com/blog/testing-for-seasonal-stability-canova-and-hansen-test-statistic/}{%
+This post} illustrates the usage of the package by applying the Canova and Hansen test statistics to the data set 
+employed in the original paper and computing p-values based on the response surface regression approach.
+\end{itemize}
+
+\end{document}

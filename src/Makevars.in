@@ -1,0 +1,13 @@
+R_INCL = @R_INCL@
+CUDA_HOME = @CUDA_HOME@
+CUDA_OBJECTS = @CUDA_OBJECTS@
+NVCC = $(CUDA_HOME)/bin/nvcc
+NVCCFLAGS = -O3 -G --shared -Xcompiler -fPIC $(R_INCL) -rdc=true -arch=sm_30 -I$(CUDA_HOME)/include
+PKG_LIBS = @PKG_LIBS@
+OBJECTS = dummy.o $(CUDA_OBJECTS)
+dev-fnc = @OBJ_AUX1@
+kernel = @OBJ_AUX2@
+
+%.o : %.cu
+	$(NVCC) $(NVCCFLAGS) -c $< -o $@
+	$(NVCC) -Xcompiler -fPIC -arch=sm_30 -dlink $($*) -o gpu.o

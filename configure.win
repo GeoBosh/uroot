@@ -1,0 +1,3 @@
+#!/bin/sh
+mv ./R/hegy-test.R.in ./R/hegy-test.R
+sed -i 's/@HAS_CUDA@/FALSE/g' ./R/hegy-test.R

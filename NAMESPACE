@@ -1,0 +1,26 @@
+
+useDynLib(uroot)
+
+export(
+ch.rs.pvalue,
+ch.test,
+hegy.boot.pval,
+hegy.regressors,
+hegy.rs.pvalue,
+hegy.test,
+seasonal.cycles,
+seasonal.dummies,
+uroot.raw.pvalue)
+
+S3method(print, CHtest)
+S3method(print, HEGYtest)
+S3method(residuals, HEGYtest)
+S3method(summary, CHtest)
+S3method(summary, HEGYtest)
+
+importFrom("stats", "AIC", "BIC", "approx", "as.formula", "cycle", "coef",
+  "deviance", "df.residual", "end", "filter", "frequency", "is.ts",
+  "lag", "logLik", "lm", "lm.fit", "pchisq", "pnorm", "qchisq", "qnorm",
+  "residuals", "start", "symnum", "time", "ts", "update", "vcov", "window")
+
+importFrom("utils", "head", "tail")
