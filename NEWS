@@ -1,3 +1,22 @@
+Version 2.0-10 2019-06-17
+-------------------------
+
+- new maintainer (Georgi N. Boshnakov).
+
+- changed the configuration files to pass cleanly CRAN checks.  The changes are
+  minimal and mainly concern the non-GPU compilation and symbol registration.  I
+  didn't make any structural changes except that now the default installation is
+  without GPU support, even if it seems present (set environment variable
+  CUDA_IGNORE to force using the GPU). The main reason for this is that the
+  compilation may fail since the nvcc compiler has rather strict system
+  requirements, which are different for different combinations of versions of
+  nvcc, flavours of OS, and OS versions. These may conflict with the tools used
+  by the R tool chain.  Currently, as in the previous version of 'uroot',
+  installation of GPU code on Windows is not attempted.
+
+- deactivated Rd documentation links to the author's website, www.jalobe.com,
+  since it seems unreachable. The vignette is unchanged though.
+
 
 Version 2.0-9 2017-01-27
 -------------------------

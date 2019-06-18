@@ -1,6 +1,6 @@
 # Process this file with autoconf to produce a configure script.
 
-AC_INIT([uroot], [2.0-9])
+AC_INIT([uroot], [2.0-10])
 AC_CONFIG_AUX_DIR([tools])
 ##AM_INIT_AUTOMAKE
 
@@ -15,6 +15,9 @@ AC_ARG_VAR([R_HOME],
 
 AC_ARG_VAR([R_INCL],
            [R include path])
+
+AC_ARG_VAR([CUDA_IGNORE],
+           [CUDA ignore])
 
 AC_ARG_VAR([CUDA_HOME],
            [CUDA home path])
@@ -40,19 +43,25 @@ AC_MSG_CHECKING([R include path])
 AC_MSG_RESULT([${R_INCL}])
 
 AC_MSG_CHECKING([CUDA_HOME environment variable])
-if test -z "${CUDA_HOME}"; then
-  CUDA_HOME=`find /usr/local/ -maxdepth 1 -type d -name "cuda*" | sort -V | tail -1`
-  AC_MSG_RESULT([not set])
-  #highest version found ${CUDA_HOME}
-else
-  AC_MSG_RESULT([${CUDA_HOME}])
-fi
+if test -z "${CUDA_IGNORE}"; then
+   if test -z "${CUDA_HOME}"; then
+     CUDA_HOME=`find /usr/local/ -maxdepth 1 -type d -name "cuda*" | sort -V | tail -1`
+     AC_MSG_RESULT([not set])
+     #highest version found ${CUDA_HOME}
+   else
+     AC_MSG_RESULT([${CUDA_HOME}])
+   fi
 
-AC_MSG_CHECKING([CUDA home path])
-if test -z "${CUDA_HOME}"; then
-  AC_MSG_RESULT([not found])
+
+   AC_MSG_CHECKING([CUDA home path])
+   if test -z "${CUDA_HOME}"; then
+     AC_MSG_RESULT([not found])
+   else
+     AC_MSG_RESULT([${CUDA_HOME}])
+   fi
 else
-  AC_MSG_RESULT([${CUDA_HOME}])
+   CUDA_HOME=``
+   AC_MSG_RESULT([ignored since CUDA_IGNORE is set])
 fi
 
 AC_MSG_CHECKING([setting CUDA library path])
@@ -65,7 +74,7 @@ else
   AC_MSG_RESULT([${CUDA_LD}])
 fi
 
-AC_MSG_CHECKING([whether CUDA is available])
+AC_MSG_CHECKING([whether CUDA is available and not ignored])
 if test -z "${CUDA_HOME}"; then
   HAS_CUDA=FALSE
   CUDA_OBJECTS=""
@@ -91,5 +100,5 @@ AC_SUBST(HAS_CUDA)
 AC_SUBST(CUDA_OBJECTS)
 AC_SUBST(OBJ_AUX1)
 AC_SUBST(OBJ_AUX2)
-AC_CONFIG_FILES([src/Makevars R/hegy-test.R])
+AC_CONFIG_FILES([src/Makevars R/hegy-test.R src/dummy.cpp])
 AC_OUTPUT

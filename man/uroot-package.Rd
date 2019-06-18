@@ -63,7 +63,7 @@ CUDA capable GPU with compute capability >= 3.0.
 \author{
 Javier López-de-Lacalle \email{javlacalle@yahoo.es}.
 
-\url{http://jalobe.com}.
+%\url{http://jalobe.com}.
 }
 
 \references{
@@ -91,5 +91,5 @@ Hylleberg, S., Engle, R., Granger, C. and Yoo, B. (1990)
 \emph{Journal of Econometrics} \bold{44}(1), pp. 215-238.
 DOI: \url{http://dx.doi.org/10.1016/0304-4076(90)90080-D}.
 }
-
-\keyword{package, ts}
+\keyword{package}
+\keyword{ts}

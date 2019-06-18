@@ -4,6 +4,7 @@
 GPU parallelization is not  
 currently available on Windows systems.
 
+
 ** Unix systems:
 
 For full operational capabilities,
@@ -16,3 +17,7 @@ the 'uroot' package requires the following installed on the system:
      http://www.nvidia.com/cuda).
 
   3) A general purpose C compiler is needed by nvcc.
+
+By default the package is installed without the GPU capabilities.  To
+request them, set environment variable CUDA_IGNORE to any nonempty value
+for the R package installer.

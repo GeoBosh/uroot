@@ -1,3 +1,5 @@
 #!/bin/sh
 mv ./R/hegy-test.R.in ./R/hegy-test.R
 sed -i 's/@HAS_CUDA@/FALSE/g' ./R/hegy-test.R
+mv ./src/dummy.cpp.in ./src/dummy.cpp
+sed -i 's/@HAS_CUDA@/0/g' ./src/dummy.cpp

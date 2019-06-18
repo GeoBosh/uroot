@@ -1,9 +1,13 @@
 Package: uroot
-Version: 2.0-9.1
-Date: 2017-01-27
+Version: 2.0-10
+Date: 2019-06-18
 Title: Unit Root Tests for Seasonal Time Series
-Author: Javier López-de-Lacalle <javlacalle@yahoo.es>
-Maintainer: ORPHANED
+Authors@R: c( person(given = "Javier", family = "López-de-Lacalle",
+                     role = c("aut"), 
+                     email = "javlacalle@yahoo.es"),
+              person(given = c("Georgi", "N."), family = "Boshnakov", 
+                     role = c("cre"), 
+                     email = "georgi.boshnakov@manchester.ac.uk") )
 Depends: R (>= 3.0.0), stats
 SystemRequirements: nvcc (release >= 7.1) (NVIDIA Cuda Compiler driver)
 Encoding: UTF-8
@@ -16,11 +20,3 @@ NeedsCompilation: yes
 LazyData: yes
 LazyDataCompression: xz
 License: GPL-2
-URL: https://jalobe.com
-Packaged: 2019-03-22 08:49:00 UTC; ripley
-Repository: CRAN
-Date/Publication: 2019-03-24 07:07:31 UTC
-X-CRAN-Original-Maintainer: Javier López-de-Lacalle
-        <javlacalle@yahoo.es>
-X-CRAN-Comment: Orphaned on 2019-03-24 as check problems were not
-        corrected in time.

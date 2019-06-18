@@ -1,5 +1,5 @@
 
-useDynLib(uroot)
+useDynLib(uroot, .registration = TRUE)
 
 export(
 ch.rs.pvalue,
