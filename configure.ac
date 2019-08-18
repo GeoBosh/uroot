@@ -45,7 +45,7 @@ AC_MSG_RESULT([${R_INCL}])
 AC_MSG_CHECKING([CUDA_HOME environment variable])
 if test -z "${CUDA_IGNORE}"; then
    if test -z "${CUDA_HOME}"; then
-     CUDA_HOME=`find /usr/local/ -maxdepth 1 -type d -name "cuda*" | sort -V | tail -1`
+     CUDA_HOME=`find /usr/local/ -type d -name "cuda*" \( ! -path "*/cuda*/*" \)  | sort -t '-' -k 2,2n | tail -1`
      AC_MSG_RESULT([not set])
      #highest version found ${CUDA_HOME}
    else

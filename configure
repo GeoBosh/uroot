@@ -1793,7 +1793,7 @@ $as_echo "${R_INCL}" >&6; }
 $as_echo_n "checking CUDA_HOME environment variable... " >&6; }
 if test -z "${CUDA_IGNORE}"; then
    if test -z "${CUDA_HOME}"; then
-     CUDA_HOME=`find /usr/local/ -maxdepth 1 -type d -name "cuda*" | sort -V | tail -1`
+     CUDA_HOME=`find /usr/local/ -type d -name "cuda*" \( ! -path "*/cuda*/*" \)  | sort -t '-' -k 2,2n | tail -1`
      { $as_echo "$as_me:${as_lineno-$LINENO}: result: not set" >&5
 $as_echo "not set" >&6; }
      #highest version found ${CUDA_HOME}
