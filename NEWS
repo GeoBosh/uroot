@@ -1,9 +1,16 @@
+Version 2.1-0 2019-08-19
+-------------------------
+
+- removed all stuff related to CUDA, since the configuration files
+  need more than the tweeks by the current maintainer in versions
+  2.0.10 - 2.0.11.
+
+
 Version 2.0-11 2019-08-18
 -------------------------
 
 - in configuration files, replaced non-POSIX options '-maxdepth' (find) and '-V'
   (sort) with equivalent POSIX approximations.
-
 
 
 Version 2.0-10 2019-06-17

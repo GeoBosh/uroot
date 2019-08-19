@@ -287,27 +287,32 @@ hegy.test <- function(x, deterministic = c(1,0,0),
     chosen.lags <- if (boot.lag.method == "fixed")
       integer(1) else integer(bargs$nb)
 
-    if (@HAS_CUDA@)
-    {
-      tmp <- .C("hegy_boot_pval", dim = as.integer(c(nb, BTdim)), 
-        seed = as.integer(bargs$seed), idc = as.integer(deterministic), 
-        ip = as.integer(c(S, n-S, dgp.nlags, bargs$maxlag, bargs$debug.tid)),
-        csns = as.integer(csns),
-        eps = as.double(e), arcoefs = as.double(arcoefs), 
-        stats0 = as.double(stats[,1]), 
-        ICtype = as.integer(switch(boot.lag.method, 
-          "fixed" = 0, "AIC" = 1, "BIC" = 2, "AICc" = 3)), 
-        bpvals = double(nrow(stats)), chosen_lags = chosen.lags, PACKAGE = "uroot")
-      stats[,2] <- tmp$bpvals
-      chosen.lags <- tmp$chosen_lags
-    } else {
-      if (grepl("windows", .Platform$OS.type)) {
-        stop("GPU parallelization could not be tested on a Windows system,\n", 
-        "consider using the function ",  sQuote("hegy.boot.pval"))
-      } else # unix
-        stop("CUDA capable GPU was not available when installing the package on this system,\n", 
-        "consider using the function ",  sQuote("hegy.boot.pval"))
-    }
+    ## removed with cuda stuff
+    ## if (@HAS_CUDA@)
+    ## {
+    ##   tmp <- .C("hegy_boot_pval", dim = as.integer(c(nb, BTdim)), 
+    ##     seed = as.integer(bargs$seed), idc = as.integer(deterministic), 
+    ##     ip = as.integer(c(S, n-S, dgp.nlags, bargs$maxlag, bargs$debug.tid)),
+    ##     csns = as.integer(csns),
+    ##     eps = as.double(e), arcoefs = as.double(arcoefs), 
+    ##     stats0 = as.double(stats[,1]), 
+    ##     ICtype = as.integer(switch(boot.lag.method, 
+    ##       "fixed" = 0, "AIC" = 1, "BIC" = 2, "AICc" = 3)), 
+    ##     bpvals = double(nrow(stats)), chosen_lags = chosen.lags, PACKAGE = "uroot")
+    ##   stats[,2] <- tmp$bpvals
+    ##   chosen.lags <- tmp$chosen_lags
+    ## } else {
+    ##   if (grepl("windows", .Platform$OS.type)) {
+    ##     stop("GPU parallelization could not be tested on a Windows system,\n", 
+    ##     "consider using the function ",  sQuote("hegy.boot.pval"))
+    ##   } else # unix
+    ##     stop("CUDA capable GPU was not available when installing the package on this system,\n", 
+    ##     "consider using the function ",  sQuote("hegy.boot.pval"))
+    ## }
+    stop("'pvalue = bootstrap' was only available with CUDA, but\n",
+         "CUDA capablities in package 'uroot' were removed from v. 2.1-0,\n", 
+         "consider using the function ",  sQuote("hegy.boot.pval"))
+
   } else
   if (pvalue == "raw")
   {

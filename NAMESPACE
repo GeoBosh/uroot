@@ -1,6 +1,4 @@
 
-useDynLib(uroot, .registration = TRUE)
-
 export(
 ch.rs.pvalue,
 ch.test,
