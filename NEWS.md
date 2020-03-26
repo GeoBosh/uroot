@@ -4,6 +4,11 @@
   `uroot:::.CH.orig.cv[12, 6]` was `2.510`, now it is `3.510` as in the original
   source (Canova and Hansen 1995, Table 1), reported by Javier Lopez de Lacalle.
 
+* created website (using `pkgdown`).
+
+* Renamed  NEWS and README and added some markdown markup, so that they play
+  better with `pkgdown`. Added some links to README and DESCRIPTION. 
+
 
 # uroot 2.1-0 2019-08-19
 

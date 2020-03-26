@@ -9,6 +9,8 @@ Authors@R: c( person(given = "Javier", family = "López-de-Lacalle",
                      role = c("cre"), 
                      email = "georgi.boshnakov@manchester.ac.uk") )
 Depends: R (>= 3.0.0), stats
+URL:  https://geobosh.github.io/uroot/
+BugReports: https://github.com/GeoBosh/uroot/issues
 Encoding: UTF-8
 Description: Seasonal unit roots and seasonal stability tests.
     P-values based on response surface regressions are available for both tests.
