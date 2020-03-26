@@ -1,3 +1,11 @@
+Version 2.1-1 2020-03-26
+-------------------------
+
+- corrected a wrong value in the internal dataset `.CH.orig.cv`. Element
+  `uroot:::.CH.orig.cv[12, 6]` was `2.510`, now it is `3.510` as in the original
+  source (Canova and Hansen 1995, Table 1), reported by Javier Lopez de Lacalle.
+
+
 Version 2.1-0 2019-08-19
 -------------------------
 
