@@ -1,32 +1,32 @@
-Version 2.1-1 2020-03-26
+# uroot 2.1-1 2020-03-26
 -------------------------
 
-- corrected a wrong value in the internal dataset `.CH.orig.cv`. Element
+* corrected a wrong value in the internal dataset `.CH.orig.cv`. Element
   `uroot:::.CH.orig.cv[12, 6]` was `2.510`, now it is `3.510` as in the original
   source (Canova and Hansen 1995, Table 1), reported by Javier Lopez de Lacalle.
 
 
-Version 2.1-0 2019-08-19
--------------------------
+# uroot 2.1-0 2019-08-19
+*------------------------
 
-- removed all stuff related to CUDA, since the configuration files
+* removed all stuff related to CUDA, since the configuration files
   need more than the tweeks by the current maintainer in versions
   2.0.10 - 2.0.11.
 
 
-Version 2.0-11 2019-08-18
--------------------------
+# uroot 2.0-11 2019-08-18
+*------------------------
 
-- in configuration files, replaced non-POSIX options '-maxdepth' (find) and '-V'
+* in configuration files, replaced non-POSIX options '-maxdepth' (find) and '-V'
   (sort) with equivalent POSIX approximations.
 
 
-Version 2.0-10 2019-06-17
+# uroot 2.0-10 2019-06-17
 -------------------------
 
-- new maintainer (Georgi N. Boshnakov).
+* new maintainer (Georgi N. Boshnakov).
 
-- changed the configuration files to pass cleanly CRAN checks.  The changes are
+* changed the configuration files to pass cleanly CRAN checks.  The changes are
   minimal and mainly concern the non-GPU compilation and symbol registration.  I
   didn't make any structural changes except that now the default installation is
   without GPU support, even if it seems present (set environment variable
@@ -37,11 +37,11 @@ Version 2.0-10 2019-06-17
   by the R tool chain.  Currently, as in the previous version of 'uroot',
   installation of GPU code on Windows is not attempted.
 
-- deactivated Rd documentation links to the author's website, www.jalobe.com,
+* deactivated Rd documentation links to the author's website, www.jalobe.com,
   since it seems unreachable. The vignette is unchanged though.
 
 
-Version 2.0-9 2017-01-27
+# uroot 2.0-9 2017-01-27
 -------------------------
 
   o Further improvements to make configure portable. 
@@ -59,7 +59,7 @@ Version 2.0-9 2017-01-27
     This may require some fix in the future; currently 
     no issue was observed when using the package.
 
-Version 2.0-8 2017-01-24
+# uroot 2.0-8 2017-01-24
 -------------------------
 
   o Configure failed on some systems. As reported by CRAN maintainer:
@@ -81,7 +81,7 @@ Version 2.0-8 2017-01-24
     As reported by R CMD check, "NAMESPACE.in" is a non-standard file, 
     but it seems the easiest way to avoid a dummy .so file.
 
-Version 2.0-7 2017-01-22
+# uroot 2.0-7 2017-01-22
 -------------------------
 
   o The configure script has been modified slightly in the hope 
@@ -95,7 +95,7 @@ Version 2.0-7 2017-01-22
 
   o Added document uroot-intro.pdf with links to further documentation.
 
-Version 2.0-6 2017-01-05
+# uroot 2.0-6 2017-01-05
 -------------------------
 
   o A cleanup script has been added.
@@ -107,7 +107,7 @@ Version 2.0-6 2017-01-05
   o The configure script creates now appropriate environment variables 
     when it detects that it is running on the ARINA cluster of the UPV/EHU.
 
-Version 2.0-5 2016-03-18
+# uroot 2.0-5 2016-03-18
 -------------------------
 
   o Based on an older version of package uroot.
