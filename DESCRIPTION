@@ -1,6 +1,6 @@
 Package: uroot
 Version: 2.1-1
-Date: 2020-03-26
+Date: 2020-09-03
 Title: Unit Root Tests for Seasonal Time Series
 Authors@R: c( person(given = "Javier", family = "López-de-Lacalle",
                      role = c("aut"), 
