@@ -45,7 +45,7 @@ the 'uroot' package requires the following installed on the system:
   
   2) CUDA software, which includes the 'nvcc' (release >= 7.1)
      NVIDIA Cuda Compiler driver (available at 
-     http://www.nvidia.com/cuda).
+     https://www.nvidia.com).
 
   3) A general purpose C compiler is needed by nvcc.
 

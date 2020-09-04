@@ -1,3 +1,8 @@
+# uroot 2.1-2 2020-09-04
+
+* changed http to https in the nvidia's cuda link.
+
+
 # uroot 2.1-1 2020-03-26
 
 * corrected a wrong value in the internal dataset `.CH.orig.cv`. Element
