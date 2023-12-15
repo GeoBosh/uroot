@@ -101,12 +101,12 @@ A list of class \code{"CHtest"} with components:
 %
 \item{fitted.model}{the fitted regression model.}
 %
-\item{NW.order}{the value of the input argument code{NW.order}.}
+\item{NW.order}{the value of the input argument \code{NW.order}.}
 %
 \item{isNullxreg}{logical, auxiliary element for \code{print} method. Were external 
 regressors defined in the argument \code{xreg}?}
 %
-\item{type.pvalue}{character, the value of the input argument code{pvalue}.}
+\item{type.pvalue}{character, the value of the input argument \code{pvalue}.}
 %
 \item{pvlabels}{a vector of characters containing a label related to each p-values. 
 Auxiliary element for \code{print} method.}
@@ -124,13 +124,14 @@ The method \code{print} displays the test statistics and p-values;
 Canova, F. and Hansen, Bruce E. (1995)
 "Are seasonal patterns constant over time? A test for seasonal stability".
 \emph{Journal of Business & Economic Statistics}, \bold{13}(3), pp. 237-252.
-DOI: \url{http://dx.doi.org/10.1080/07350015.1995.10524598}.
+DOI: \doi{10.1080/07350015.1995.10524598}.
 
 Díaz-Emparanza, I. and Moral, M. P. (2013).
 \emph{Seasonal stability tests in gretl. An application to international tourism data}.
 Working paper: Biltoki D.T. 2013.03. 
 URL: \url{https://addi.ehu.es/handle/10810/10577}.
-Gretl code: \url{http://www.ehu.eus/ignacio.diaz-emparanza/packages/Canova_Hansen.gfn}.
+Gretl code: https://www.ehu.eus/ignacio.diaz-emparanza/packages/Canova_Hansen.gfn
+(seems unavailable, so not linked)
 }
 
 \examples{

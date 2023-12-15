@@ -53,17 +53,17 @@ A numeric giving the calculated p-value.
 Beaulieu, J. J. Miron, J. A. (1993)
 "Seasonal Unit Roots in Aggregate U.S. Data".
 \emph{Journal of Econometrics}, \bold{55}(1-2), pp. 305-328.
-DOI: \url{http://dx.doi.org/10.1016/0304-4076(93)90018-Z}.
+DOI: \doi{10.1016/0304-4076(93)90018-Z}.
 
 Canova, F. and Hansen, Bruce E. (1995)
 "Are Seasonal Patterns Constant over Time? A Test for Seasonal Stability".
 \emph{Journal of Business & Economic Statistics}, \bold{13}(3), pp. 237-252.
-DOI: \url{http://dx.doi.org/10.1080/07350015.1995.10524598}.
+DOI: \doi{10.1080/07350015.1995.10524598}.
 
 Hylleberg, S., Engle, R., Granger, C. and Yoo, B. (1990)
 "Seasonal integration and cointegration".
 \emph{Journal of Econometrics} \bold{44}(1), pp. 215-238.
-DOI: \url{http://dx.doi.org/10.1016/0304-4076(90)90080-D}.
+DOI: \doi{10.1016/0304-4076(90)90080-D}.
 
 }
 

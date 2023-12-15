@@ -18,7 +18,7 @@ A list containing time series objects.
 }
 
 \source{
-\url{http://www.ssc.wisc.edu/~bhansen/progs/jbes_95.html}
+  \url{https://www.ssc.wisc.edu/~bhansen/progs/jbes_95.html}
 }
 
 \keyword{datasets}

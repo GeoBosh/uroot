@@ -173,7 +173,7 @@ elements that were selected.}
 %\item{isNullxreg}{logical, auxiliary element for \code{print} method. Were external 
 %regressors defined in the argument \code{xreg}?}
 %
-\item{type.pvalue}{a character, the value of the input argument code{pvalue}.}
+\item{type.pvalue}{a character, the value of the input argument \code{pvalue}.}
 %
 \item{bootstrap}{a list, parameter options employed in the bootstrap (if \code{pvalue = "bootstrap"}).}
 %
@@ -200,12 +200,12 @@ which are used to test null of unit root at different frequencies.
 Beaulieu, J. J. Miron, J. A. (1993)
 "Seasonal unit roots in aggregate U.S. data."
 \emph{Journal of Econometrics} \bold{55}(1-2), pp. 305-328.
-DOI: \url{http://dx.doi.org/10.1016/0304-4076(93)90018-Z}.
+DOI: \doi{10.1016/0304-4076(93)90018-Z}.
 
 Burridge, P. and Taylor, R.  (2004)
 "Bootstrapping the HEGY seasonal unit root tests."
 \emph{Journal of Econometrics} \bold{123}(1), pp. 67-87.
-DOI: \url{http://dx.doi.org/10.1016/j.jeconom.2003.10.029}.
+DOI: \doi{10.1016/j.jeconom.2003.10.029}.
 
 Cáceres, J. J. (1996)
 "Contraste de raíces unitarias en datos semanales."
@@ -214,13 +214,14 @@ Cáceres, J. J. (1996)
 Díaz-Emparanza, I. (2014)
 "Numerical distribution functions for seasonal unit root tests"-
 \emph{Computational Statistics and Data Analysis}, \bold{76}, pp. 237-247.
-DOI: \url{http://dx.doi.org/10.1016/j.csda.2013.03.006}.
-Gretl code: \url{http://www.ehu.eus/ignacio.diaz-emparanza/packages/GHegy.gfn}.
+DOI: \doi{10.1016/j.csda.2013.03.006}.
+Gretl code: https://www.ehu.eus/ignacio.diaz-emparanza/packages/GHegy.gfn
+(seems unavailable, so not linked)
 
 Franses, F. H. (1991)
 "Seasonality, non-stationarity and the forecasting of monthly time series."
 \emph{International Journal of Forecasting} \bold{7}(2), pp. 199-208.
-DOI: \url{http://dx.doi.org/10.1016/0169-2070(91)90054-Y}.
+DOI: \doi{10.1016/0169-2070(91)90054-Y}.
 
 Franses, P. H. and Hobijn, H. (1997)
 "Critical values for unit root tests in seasonal time series."
@@ -228,20 +229,20 @@ Franses, P. H. and Hobijn, H. (1997)
 
 Harvey D. I. and van Dijk D. (2006). "Sample size, lag order and critical values of seasonal
 unit root tests." \emph{Computational Statistics & Data Analysis}, \bold{50}(10), 2734-2751. 
-DOI: \url{http://dx.doi.org/10.1016/j.csda.2005.04.011}.
+DOI: \doi{10.1016/j.csda.2005.04.011}.
 
 Hylleberg, S., Engle, R., Granger, C. and Yoo, B. (1990)
 "Seasonal integration and cointegration."
 \emph{Journal of Econometrics} \bold{44}(1), pp. 215-238.
-DOI: \url{http://dx.doi.org/10.1016/0304-4076(90)90080-D}.
+DOI: \doi{10.1016/0304-4076(90)90080-D}.
 
 MacKinnon J. G. (1994). "Approximate asymptotic distribution functions for unit-root and
 cointegration tests." \emph{Journal of Business and Economic Statistics}, \bold{12}(2), 167-176. 
-DOI: \url{http://dx.doi.org/10.1080/07350015.1994.10510005}.
+DOI: \doi{10.1080/07350015.1994.10510005}.
 
 Smith, R. J., Taylor, A. M. R. and del Barrio Castro, T. (2009)
 "Regression-based seasonal unit roots."\emph{Econometric Theory} \bold{25}(2), pp. 527-560.
-DOI: \url{http://dx.doi.org/10.1017/S0266466608090166}.
+DOI: \doi{10.1017/S0266466608090166}.
 }
 
 \examples{

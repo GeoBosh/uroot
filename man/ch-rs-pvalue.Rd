@@ -52,7 +52,8 @@ Díaz-Emparanza, I. and Moral, M. P. (2013)
 \emph{Seasonal Stability Tests in gretl. An Application to International Tourism Data}.
 Working paper: Biltoki D.T. 2013.03. 
 URL: \url{https://addi.ehu.es/handle/10810/10577}.
-Gretl code: \url{http://www.ehu.eus/ignacio.diaz-emparanza/packages/Canova_Hansen.gfn}.
+Gretl code: https://www.ehu.eus/ignacio.diaz-emparanza/packages/Canova_Hansen.gfn
+(seems unavailable, so not linked)
 }
 
 \keyword{ts}

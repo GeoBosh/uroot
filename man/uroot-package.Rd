@@ -70,17 +70,17 @@ Javier López-de-Lacalle \email{javlacalle@yahoo.es}.
 Burridge, P. and Taylor, R.  (2004)
 "Bootstrapping the HEGY seasonal unit root tests."
 \emph{Journal of Econometrics} \bold{123}(1), pp. 67-87.
-DOI: \url{http://dx.doi.org/10.1016/j.jeconom.2003.10.029}.
+DOI: \doi{10.1016/j.jeconom.2003.10.029}.
 
 Canova, F. and Hansen, Bruce E. (1995)
 "Are seasonal patterns constant over time? A test for seasonal stability".
 \emph{Journal of Business & Economic Statistics}, \bold{13}(3), pp. 237-252.
-DOI: \url{http://dx.doi.org/10.1080/07350015.1995.10524598}.
+DOI: \doi{10.1080/07350015.1995.10524598}.
 
 Díaz-Emparanza, I. (2014)
 "Numerical distribution functions for seasonal unit root tests"-
 \emph{Computational Statistics and Data Analysis}, \bold{76}, pp. 237-247.
-DOI: \url{http://dx.doi.org/10.1016/j.csda.2013.03.006}.
+DOI: \doi{10.1016/j.csda.2013.03.006}.
 
 Díaz-Emparanza, I. and Moral, M. P. (2013).
 \emph{Seasonal stability tests in gretl. An application to international tourism data}.
@@ -89,7 +89,7 @@ Working paper: Biltoki D.T. 2013.03.
 Hylleberg, S., Engle, R., Granger, C. and Yoo, B. (1990)
 "Seasonal integration and cointegration".
 \emph{Journal of Econometrics} \bold{44}(1), pp. 215-238.
-DOI: \url{http://dx.doi.org/10.1016/0304-4076(90)90080-D}.
+DOI: \doi{10.1016/0304-4076(90)90080-D}.
 }
 \keyword{package}
 \keyword{ts}

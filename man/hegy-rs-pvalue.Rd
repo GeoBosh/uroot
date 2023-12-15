@@ -60,8 +60,9 @@ A numeric, the p-value.
 Díaz-Emparanza, I. (2014)
 "Numerical Distribution Functions for Seasonal Unit Root Tests"-
 \emph{Computational Statistics and Data Analysis} \bold{76}, pp. 237-247.
-DOI: \url{http://dx.doi.org/10.1016/j.csda.2013.03.006}.
-Gretl code: \url{http://www.ehu.eus/ignacio.diaz-emparanza/packages/GHegy.gfn}.
+DOI: \doi{10.1016/j.csda.2013.03.006}.
+Gretl code: https://www.ehu.eus/ignacio.diaz-emparanza/packages/Canova_Hansen.gfn/
+(seems unavailable, so not linked)
 }
 
 \keyword{ts}

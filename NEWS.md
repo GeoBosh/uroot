@@ -1,3 +1,8 @@
+# uroot 2.1-2 2023-12-15
+
+* fixed several Rd files for Rcheck's 'lost braces' NOTEs.
+
+
 # uroot 2.1-2 2020-09-04
 
 * changed http to https in the nvidia's cuda link.

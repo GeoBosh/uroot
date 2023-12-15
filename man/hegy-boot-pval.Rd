@@ -68,12 +68,12 @@ for debugging).
 Burridge, P. and Taylor, R.  (2004)
 "Bootstrapping the HEGY seasonal unit root tests."
 \emph{Journal of Econometrics} \bold{123}(1), pp. 67-87.
-DOI: \url{http://dx.doi.org/10.1016/j.jeconom.2003.10.029}.
+DOI: \doi{10.1016/j.jeconom.2003.10.029}.
 
 Hylleberg, S., Engle, R., Granger, C. and Yoo, B. (1990)
 "Seasonal integration and cointegration."
 \emph{Journal of Econometrics} \bold{44}(1), pp. 215-238.
-DOI: \url{http://dx.doi.org/10.1016/0304-4076(90)90080-D}.
+DOI: \doi{10.1016/0304-4076(90)90080-D}.
 }
 
 \examples{
