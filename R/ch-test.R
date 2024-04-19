@@ -43,7 +43,7 @@ ch.test <- function(x, type = c("dummy", "trigonometric"),
     stop("wrong dimension of argument ", sQuote("xreg"))
   S <- frequency(x)
   if (S < 2)
-    stop("the time series is not seasonal")
+    stop("The dataset either does not conform to a time series format or its frequency is less than two.")
 
   if (is.null(NW.order))
     NW.order <- round(S * (n/100)^0.25)

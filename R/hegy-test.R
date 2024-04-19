@@ -34,7 +34,7 @@ hegy.test <- function(x, deterministic = c(1,0,0),
   n <- length(x)
   S <- frequency(x)
   if (S < 2)
-    stop("the time series is not seasonal")
+    stop("The dataset either does not conform to a time series format or its frequency is less than two.")
   isSeven <- (S %% 2) == 0
   isSevenp2 <- 2 + isSeven
   dx <- diff(x, S)
