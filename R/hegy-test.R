@@ -30,11 +30,16 @@ hegy.test <- function(x, deterministic = c(1,0,0),
   }
 
   xreg <- NULL
-  stopifnot(is.ts(x))
+  data.name <- deparse(substitute(x))
+  if (!is.ts(x)) {
+    stop(paste0("Error: Input (",data.name, ") is not a time series. Input must be a time series object."))
+  }
   n <- length(x)
   S <- frequency(x)
-  if (S < 2)
-    stop("the time series is not seasonal")
+  if (S < 2){
+    stop("The dataset does not conform to the required format; its frequency is less than two.")
+  }
+    
   isSeven <- (S %% 2) == 0
   isSevenp2 <- 2 + isSeven
   dx <- diff(x, S)
@@ -44,7 +49,7 @@ hegy.test <- function(x, deterministic = c(1,0,0),
       stop("the number of rows in argument ", sQuote("xreg"), 
         " does not match the length of ", sQuote("diff(x, frequency(x))"))
 
-  data.name <- deparse(substitute(x))
+  
   lag.method <- match.arg(lag.method)
   isNullxreg <- is.null(xreg)
   pvalue <- match.arg(pvalue)

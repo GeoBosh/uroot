@@ -1,3 +1,7 @@
+# uroot 2.1-4 2024-04-25
+
+* fixed error message for dataset frequency.
+
 # uroot 2.1-3 2023-12-15
 
 * fixed several Rd files for Rcheck's 'lost braces' NOTEs.
