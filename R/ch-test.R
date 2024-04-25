@@ -37,13 +37,15 @@ ch.test <- function(x, type = c("dummy", "trigonometric"),
   type <- match.arg(type)
   pvalue <- match.arg(pvalue)
   isNullxreg <- is.null(xreg)
-
+  if (!is.ts(x)) {
+    stop(paste0("Error: Input (",data.name, ") is not a time series. Input must be a time series object."))
+  }
   n <- length(x)
   if (!isNullxreg && NROW(xreg) != n)
     stop("wrong dimension of argument ", sQuote("xreg"))
   S <- frequency(x)
   if (S < 2)
-    stop("The dataset either does not conform to a time series format or its frequency is less than two.")
+    stop("The dataset does not conform to the required format; its frequency is less than two.")
 
   if (is.null(NW.order))
     NW.order <- round(S * (n/100)^0.25)
