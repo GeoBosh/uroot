@@ -1,3 +1,11 @@
+# uroot 2.1-3.9000
+
+* amended the error message returned by `ch.test()` when `frequency(x)` is less
+  than 2. This may be because the time series is non-seasonal but it may just be
+  because the user has failed to set the seasonality or a consequence of `x` not
+  coming from a time series class. (thanks to @karamelikli for reporting this)
+
+
 # uroot 2.1-3 2023-12-15
 
 * fixed several Rd files for Rcheck's 'lost braces' NOTEs.
